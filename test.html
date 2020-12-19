@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript game</title>
+    <style>
+        @font-face {
+            font-family: 'Robot-Reavers-Italic';
+            src:url('fonts/Robot-Reavers-Italic.ttf.woff') format('woff'),
+            url('fonts/Robot-Reavers-Italic.ttf.svg#Robot-Reavers-Italic') format('svg'),
+            url('fonts/Robot-Reavers-Italic.ttf.eot'),
+            url('fonts/Robot-Reavers-Italic.ttf.eot?#iefix') format('embedded-opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            font-family: 'Robot-Reavers-Italic', sans-serif;
+        }
+        canvas {
+            background: #eee;
+            display: block;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .title {
+            font-family: 'Robot-Reavers-Italic', sans-serif;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        .canvas-container {
+            border: 1px solid black;
+        }
+
+        .player {
+        //position: absolute;
+            width: 50%;
+        }
+        .left {
+            text-align: left;
+            background-color: grey;
+        }
+        .right {
+            text-align: right;
+            right: 0;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+<div class="title">Pong</div>
+
+<div class="canvas-container">
+    <canvas id="gameBoard" width="650" height="400"></canvas>
+</div>
+
+<div style="display: flex;">
+    <div class="side-section">
+        <div class="player left">Player One</div>
+        Score: 0
+    </div>
+    <div class="side-section">
+        <div class="player right">Player Two</div>
+        Score: 0
+    </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
